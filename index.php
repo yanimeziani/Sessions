@@ -1,10 +1,15 @@
 <?php
+session_start();
+$message = '';
+if(!isset($_SESSION['email'])){
     if(isset($_POST['email']) && isset($_POST['password'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $message = '';
+        
         if(!empty($email) && !empty($password)){
             if($email == 'yani.meziani@protonmail.com' && $password == '123456'){
+                
+                $_SESSION['email'] = $email;
                 header('Location: welcome.php');
             } else {
                 $message = 'Email or password is incorrect.';
@@ -13,6 +18,9 @@
             $message = 'Please fill in all fields.';
         }
     }
+} else {
+    header('Location: welcome.php');
+}
 ?>
 
 <!DOCTYPE html>
