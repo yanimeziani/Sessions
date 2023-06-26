@@ -1,3 +1,12 @@
+<?php
+    $message= "";
+    session_start();
+    if(isset($_SESSION['email'])){
+        $message = 'Welcome, ' . $_SESSION['email'];
+    } else {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,7 @@
     <title>Welcome</title>
 </head>
 <body>
-    <p>Welcome.</p>
+    <p><?php echo $message; ?></p>
+    <a href="secure.php"><p>Go to very secure page -></p></a>
 </body>
 </html>
