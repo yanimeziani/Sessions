@@ -1,3 +1,12 @@
+<?php
+    $message= "";
+    session_start();
+    if(isset($_SESSION['email'])){
+        $message = 'Here is my bank account password: <strong>123456</strong>';
+    } else {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,6 @@
     <title>Secure</title>
 </head>
 <body>
-    <p>Here is my bank account password: <strong>123456</strong></p>
+    <p><?php echo $message;?></p>
 </body>
 </html>
