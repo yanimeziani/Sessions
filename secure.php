@@ -16,5 +16,6 @@
 </head>
 <body>
     <p><?php echo $message;?></p>
+    <a href="logout.php"><p>Logout</p></a>
 </body>
 </html>

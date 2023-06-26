@@ -17,5 +17,6 @@
 <body>
     <p><?php echo $message; ?></p>
     <a href="secure.php"><p>Go to very secure page -></p></a>
+    <a href="logout.php"><p>Logout</p></a>
 </body>
 </html>
