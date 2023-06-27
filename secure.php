@@ -5,6 +5,7 @@
         $message = 'Here is my bank account password: <strong>123456</strong>';
     } else {
         header('Location: index.php');
+        exit();
     }
 ?>
 <!DOCTYPE html>

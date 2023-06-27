@@ -5,6 +5,7 @@
         $message = 'Welcome, ' . $_SESSION['email'];
     } else {
         header('Location: index.php');
+        exit();
     }
 ?>
 <!DOCTYPE html>

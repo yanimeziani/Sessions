@@ -11,6 +11,7 @@ if(!isset($_SESSION['email'])){
                 
                 $_SESSION['email'] = $email;
                 header('Location: welcome.php');
+                exit();
             } else {
                 $message = 'Email or password is incorrect.';
             }
@@ -20,6 +21,7 @@ if(!isset($_SESSION['email'])){
     }
 } else {
     header('Location: welcome.php');
+    exit();
 }
 ?>
 
